@@ -23,9 +23,14 @@ class chip8 {
         uint8_t delay;      // delay register
         uint8_t sound;      // sound register
 
+        void initialize(); 
 
+        uint16_t nnn(uint16_t opcode);
+        uint8_t n(uint16_t opcode);
+        uint8_t x(uint16_t opcode);
+        uint8_t y(uint16_t opcode);
+        uint8_t kk(uint16_t opcode);
 
-        void init();
 };
 
 #endif
