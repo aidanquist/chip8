@@ -20,8 +20,8 @@ class chip8 {
         uint16_t PC;        // program counter
         uint16_t opcode;    // opcode
 
-        uint8_t delay;      // delay register
-        uint8_t sound;      // sound register
+        uint8_t DT;      // delay register
+        uint8_t ST;      // sound register
 
         void initialize(); 
 

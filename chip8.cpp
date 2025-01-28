@@ -15,8 +15,8 @@ void chip8::initialize(){
     PC = 0x200; //Most Chip-8 programs start at location 0x200
     opcode = 0;
 
-    delay = 0;
-    sound = 0;
+    DT = 0;
+    ST = 0;
 }
 
 uint16_t chip8::nnn(uint16_t opcode){
@@ -162,9 +162,11 @@ void chip8::cycle(){
             switch (opcode & 0x00FF){
                 case 0x0007:
                     //Fx07 - LD Vx, DT
+                    V[x(opcode)] = DT;
                     break;
                 case 0x000A:
                     //Fx0A - LD Vx, K
+                    
                     break;
                 case 0x0015:
                     //Fx15 - LD DT, Vx
